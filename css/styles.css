@@ -292,5 +292,8 @@ nav h1 a {
   .filter-options h2 {
     margin: 0px;
   }
-  
+
+  #restaurants-list li {
+    padding: 0 10px 0;
+  }
 }
