@@ -289,6 +289,15 @@ nav h1 a {
 }
 
 /* ====================== At Media query ====================== */
+@media only screen and (max-width: 800px) {
+  #maincontent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+
 @media only screen and (max-width: 600px) {
   .filter-options {
     flex-direction: column;
