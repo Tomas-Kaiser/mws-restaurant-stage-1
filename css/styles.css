@@ -345,12 +345,25 @@ nav h1 a {
 
   #reviews-container {
     width: 100%;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+
+  #restaurant-container, #reviews-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #reviews-list li {
     position: initial;
   }
-  
+  #reviews-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
@@ -363,5 +376,5 @@ nav h1 a {
   .filter-options h2 {
     margin: 0px;
   }
-  
+
 }
