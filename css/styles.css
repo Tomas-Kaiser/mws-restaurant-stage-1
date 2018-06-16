@@ -366,7 +366,7 @@ nav h1 a {
   }
 
   #breadcrumb {
-    width: calc(90% - 80px);
+    width: 100%;
   }
 }
 
