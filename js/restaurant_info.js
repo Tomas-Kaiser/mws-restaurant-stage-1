@@ -135,6 +135,7 @@ createReviewHTML = (review) => {
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
+  rating.classList.add('rating-avg');
   revContent.appendChild(rating);
 
   const comments = document.createElement('p');

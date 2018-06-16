@@ -278,10 +278,10 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
   position: relative;
   width: 85%;
 }
+
 #reviews-list li p {
   margin: 0 0 10px;
 }
@@ -291,7 +291,38 @@ nav h1 a {
 
 .review-header {
   font-size: 15pt;
-  padding-top: 10px;
+  padding: 5px 0 0 10px;
+  background: #252831;
+  color: wheat;
+}
+
+.review-header h3{
+  margin: 0px;
+}
+
+.review-header p{
+  color: wheat;
+  text-align: right;
+  padding: 0 10px 5px 0;
+}
+
+.review-content {
+  padding: 10px;
+}
+
+.review-content p {
+  padding: 10px;
+  font-size: 12pt;
+}
+
+.rating-avg {
+  display: inline-block;
+  background: wheat;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 12pt;
+  
 }
 
 /* ====================== At Media query ====================== */
