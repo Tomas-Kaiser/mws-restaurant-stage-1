@@ -14,7 +14,6 @@ body {
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
 	color: #333;
 }
 a {
@@ -44,7 +43,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 25px 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -70,9 +69,10 @@ nav h1 a {
     padding: 10px 40px 16px;
     list-style: none;
     background-color: #eee;
-    font-size: 17px;
+    font-size: 20px;
     margin: 0;
     width: calc(50% - 80px);
+    opacity: 0.75;
 }
 
 /* Display list items side by side */
@@ -293,6 +293,25 @@ nav h1 a {
   #maincontent {
     display: flex;
     flex-direction: column;
+  }
+
+  .inside #map-container {
+    height: 263px;
+    width: 100%;
+    position: absolute;
+  }
+
+  #restaurant-container {
+    margin-top: 200px;
+    width: 100%;
+  }
+
+  #reviews-container {
+    width: 100%;
+  }
+
+  #reviews-list li {
+    position: initial;
   }
   
 }
