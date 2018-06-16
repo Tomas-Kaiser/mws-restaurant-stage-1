@@ -364,6 +364,10 @@ nav h1 a {
     flex-direction: column;
     align-items: center;
   }
+
+  #breadcrumb {
+    width: calc(90% - 80px);
+  }
 }
 
 
