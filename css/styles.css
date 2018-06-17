@@ -134,6 +134,11 @@ nav h1 a {
   width: 200px;
 }
 
+.filter-options select:focus {
+  outline: 0;
+  box-shadow: 0 0 8px 3px red;
+}
+
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
@@ -192,7 +197,9 @@ nav h1 a {
   text-transform: uppercase;
 }
 
-#restaurants-list li a:hover {
+#restaurants-list li a:hover,
+#restaurants-list li a:focus {
+  outline: 0;
   background-color: #0275d8;
 }
 
