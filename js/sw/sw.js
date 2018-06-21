@@ -23,8 +23,22 @@ let urlToCache = [
 self.addEventListener('install', (event) => {
    event.waitUnitil(
       //caches API
-      caches.open(cacheName).then((cache) => {
+      caches.open(staticCacheName).then((cache) => {
          return cache.addAll(urlToCache);
+      })
+   );
+});
+
+self.addEventListener('activate', (event) => {
+   event.waitUntil(
+      caches.keys().then((cacheNames) => {
+         return promis.all(
+            cacheNames.filter((cacheName) => {
+               return cacheName.startsWith('restaurant-') && cacheName !== staticCacheName;
+            }).map((cacheName) => {
+               return caches.delete(cacheName);
+            })
+         );
       })
    );
 });
@@ -32,7 +46,7 @@ self.addEventListener('install', (event) => {
 // Return cache
 self.addEventListener('fetch', (event) => {
    event.responWith(
-         caches.open(cacheName).then((cache) => {
+         caches.open(staticCacheName).then((cache) => {
             return cache.match(event.request);
          })
    );
