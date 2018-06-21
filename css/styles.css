@@ -332,6 +332,10 @@ nav h1 a {
   
 }
 
+.leaflet-top .leaflet-control {
+  top: 45px;
+}
+
 /* ====================== At Media query ====================== */
 @media only screen and (max-width: 800px) {
   #maincontent {
