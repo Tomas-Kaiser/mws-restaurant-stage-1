@@ -1,4 +1,4 @@
-let cacheName = 'restaurant-cache-v1';
+let staticCacheName = 'restaurant-cache-v1';
 
 let urlToCache = [
    '/',
@@ -24,7 +24,10 @@ self.addEventListener('install', (event) => {
    event.waitUnitil(
       //caches API
       caches.open(staticCacheName).then((cache) => {
+         console.log(cache);
          return cache.addAll(urlToCache);
+      }).catch(err => {
+         console.log(err);
       })
    );
 });
@@ -45,9 +48,9 @@ self.addEventListener('activate', (event) => {
 
 // Return cache
 self.addEventListener('fetch', (event) => {
-   event.responWith(
-         caches.open(staticCacheName).then((cache) => {
-            return cache.match(event.request);
+   event.respondWith(
+      caches.match(event.request).then(function (response) {
+         return response || fetch(event.request);
          })
    );
 });
