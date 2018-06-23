@@ -336,6 +336,9 @@ nav h1 a {
   top: 45px;
 }
 
+
+
+
 /* ====================== At Media query ====================== */
 @media only screen and (max-width: 800px) {
   #maincontent {
@@ -378,6 +381,9 @@ nav h1 a {
 
   #breadcrumb {
     width: 100%;
+  }
+  .inside header {
+    z-index: 1010;
   }
 }
 
