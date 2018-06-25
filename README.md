@@ -1,6 +1,6 @@
-# Mobile Web Specialist Certification Course
+# Front End Web developer ND at Udacity
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
+#### Restaurant Reviews_
 
 ## Project Overview: Stage 1
 
