@@ -212,17 +212,19 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 */
 
 /**
- * Add The service worker .
+ * Add The service worker.
  */
 
-if ('servisWorker' in navigator) {
-  navigator.serviseWorker.register('./js/sw/sw.js')
-  .then((registration) => {
-    if (registration.installing) {
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./js/sw/sw.js')
+  .then((reg) => {
+    console.log('SW is reg');
+    if (reg.installing) {
       console.log('Service worker installing');
-    } else if (registration.waiting) {
+    } else if (reg.waiting) {
       console.log('Service worker installed');
-    } else if (registration.active) {
+    } else if (reg.active) {
       console.log('Service worker active');
     }
     console.log(`Registration succeeded. Scope is ${reg.scope}`);

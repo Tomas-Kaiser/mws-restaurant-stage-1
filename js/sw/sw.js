@@ -21,7 +21,7 @@ let urlToCache = [
 ];
 
 self.addEventListener('install', (event) => {
-   event.waitUnitil(
+   event.waitUntil(
       //caches API
       caches.open(staticCacheName).then((cache) => {
          console.log(cache);
@@ -35,7 +35,7 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
    event.waitUntil(
       caches.keys().then((cacheNames) => {
-         return promis.all(
+         return promise.all(
             cacheNames.filter((cacheName) => {
                return cacheName.startsWith('restaurant-') && cacheName !== staticCacheName;
             }).map((cacheName) => {
